@@ -1,0 +1,108 @@
+.krow * {}
+
+.krow h1,
+.krow h2,
+.krow h3,
+.krow h4 {
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.krow span {
+    font-size: 12px;
+}
+
+.krow hr {
+    margin-bottom: 10px;
+}
+
+.krow {
+    width: 100%;
+    overflow: hidden;
+}
+
+.kcol-1,
+.kcol-2,
+.kcol-3,
+.kcol-4,
+.kcol-5,
+.kcol-6,
+.kcol-7,
+.kcol-8,
+.kcol-9,
+.kcol-10,
+.kcol-11,
+.kcol-12 {
+    padding: 0px 10px;
+    float: left;
+}
+
+.kcol-6 {
+    width: 50%;
+}
+
+.kcol-12 {
+    width: 100%;
+}
+
+.kcol-3 {
+    width: 25%;
+}
+
+.kcol-9 {
+    width: 75%;
+}
+
+.kcol-1 {
+    width: 8.33%;
+}
+
+.kcol-2 {
+    width: 16.66%
+}
+
+.kcol-4 {
+    width: 33.33%;
+}
+
+.kcol-8 {
+    width: 66.66%;
+}
+
+.kcol-10 {
+    width: 83.33%;
+}
+
+.kcol-11 {
+    width: 91.66%;
+}
+
+.description {
+    margin: 15px 0px;
+    padding: 15px;
+    border: 1px solid #e4e4e4;
+}
+
+.description code {
+    line-height: 1.8;
+    background: #666;
+    font-family: 'Consolas';
+    font-size: 14px;
+}
+
+.description dl {
+    line-height: 1.5
+}
+
+.description dl>dt {
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.description dl>dt:before {
+    content: '》';
+    font-weight: 700;
+    margin-right: 6px;
+    height: 5px;
+    color: #48f;
+}

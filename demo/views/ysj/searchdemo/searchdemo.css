@@ -1,0 +1,102 @@
+.head {
+    color: black;
+}
+
+.head span {
+    margin-left: 5px;
+}
+
+.head .closetag {
+    background-color: #f9f9f9;
+    padding: 5px;
+}
+
+.head .closetag a {
+    color: rgb(235, 97, 97);
+}
+
+.searchform {
+    border: 1px solid #bfbfbf;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0px 10px;
+    color: black;
+}
+
+.content {
+    padding: 10px;
+}
+
+.content .title {
+    line-height: 30px;
+}
+
+.content ul {
+    list-style: none;
+}
+
+.content ul li {
+    width: 100px;
+    float: left;
+    line-height: 30px;
+}
+
+.content ul li a {
+    padding: 6px 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.content ul li a:hover {
+    color: red;
+}
+
+.content ul li .selectedli {
+    color: white;
+    background-color: rgb(235, 97, 97);
+}
+
+.content ul li .selectedli:hover {
+    color: black;
+}
+
+.content .operation {
+    display: inline-block;
+    float: right;
+    margin-top: -25px;
+    z-index: 9999;
+}
+
+.content .ant-row {
+    width: 80%;
+    margin: 5px 0px;
+}
+
+.content .operation span a {
+    margin-left: 5px;
+    color: rgba(0, 0, 0, .65);
+    padding: 6px 15px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.content .operation span a:hover {
+    color: red;
+}
+
+.content .operation .selected {
+    color: white;
+    background-color: rgb(235, 97, 97);
+}
+
+.content .operation .selected:hover {
+    color: black;
+}
+
+.card9-layout {
+    margin: 20px 0px;
+}
+
+.pagination {
+    text-align: center;
+}

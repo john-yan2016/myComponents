@@ -1,0 +1,42 @@
+.time-table {}
+
+.time-table h1 {
+    padding: 10px 0px;
+}
+
+.time-table button {
+    padding: 4px 8px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.time-table button.init {
+    margin: 10px;
+}
+
+table#time-table {
+    border-collapse: collapse;
+}
+
+table#time-table th,
+table#time-table td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    cursor: pointer;
+}
+
+table#time-table thead>tr>th:first-child,
+table#time-table thead>tr>th:last-child,
+table#time-table tr>th:first-child,
+table#time-table tr>td:last-child {
+    cursor: default;
+}
+
+table#time-table td.slt {
+    background-color: #ddd;
+}
+
+table#time-table.envent-table tbody>tr>th {
+    cursor: pointer;
+}

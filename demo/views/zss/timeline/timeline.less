@@ -1,0 +1,94 @@
+.timeline {
+    .timeline-item.item {
+        position: relative;
+        margin: 0;
+        .dot {
+            * {
+                position: absolute;
+            }
+        }
+        .icon {
+            position: absolute;
+            z-index: 1;
+            background-color: #fff;
+        }
+        .text {
+            padding: 0 0 24px 12px;
+            border-left: 2px solid #ddd;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+            a {
+                color: #108ee9;
+                cursor: pointer;
+            }
+        }
+        &:nth-last-child(1) {
+            .text {
+                border: 0;
+                
+            }
+        }
+        
+    }
+}
+
+.timeline.pending{
+    .timeline-item.item {
+      &:nth-last-child(2) {
+            .text {
+                border-left: 2px dotted #ddd;
+            }
+        }
+    }
+}
+
+.timeline.evenCols.timeline-start-right {
+    .timeline-item.item {
+        &:nth-child(odd) {
+            margin-left: 200px;
+        }
+        &:nth-child(even) {
+            width: 202px;
+            .icon {
+              left: auto !important;
+                right: -5px;
+            }
+            .text {
+                border-left: 0;
+                border-right: 2px solid #ddd;
+                text-align: right;
+                padding: 0 12px 24px 0;
+            }
+        }
+         &:nth-last-child(1) {
+            .text {
+                border: 0;
+            }
+        }
+    }
+}
+
+.timeline.evenCols.timeline-start-left {
+    .timeline-item.item {
+        &:nth-child(even) {
+            margin-left: 200px;
+        }
+        &:nth-child(odd) {
+            width: 202px;
+            .icon {
+              left: auto !important;
+                right: -5px;
+            }
+            .text {
+                border-left: 0;
+                border-right: 2px solid #ddd;
+                text-align: right;
+                padding: 0 12px 24px 0;
+            }
+        }
+         &:nth-last-child(1) {
+            .text {
+                border: 0;
+            }
+        }
+    }
+}

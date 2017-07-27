@@ -1,0 +1,17 @@
+ button {
+     padding: 4px 8px;
+     background: #eee;
+     border: 1px solid #ddd;
+     border-radius: 3px;
+ }
+ 
+ .upload {
+     display: inline-table;
+     cursor: pointer;
+     margin: 10px;
+ }
+ 
+ .upload>input {
+     display: none;
+     cursor: pointer;
+ }

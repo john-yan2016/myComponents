@@ -1,0 +1,24 @@
+.rate {
+    ul {
+        li {
+            float: left;
+            cursor: pointer;
+            i {
+                font-size: 20px;
+                margin: 3px;
+            }
+            &:hover {
+                i {
+                    transform: scale(1.15);
+                }
+            }
+        }
+        &:after {
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+    }
+}
