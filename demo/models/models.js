@@ -111,7 +111,7 @@ export const sidebarMenu = [{
         url: '/ysj/switch',
         icon: 'fa fa-arrow-right',
         title: '切换开关（switch）'
-    },{
+    }, {
         url: '/ysj/tool1',
         icon: 'fa fa-arrow-right',
         title: '搜索'
@@ -123,6 +123,10 @@ export const sidebarMenu = [{
         url: '/ysj/tool3',
         icon: 'fa fa-arrow-right',
         title: '地图'
+    }, {
+        url: '/ysj/tool4',
+        icon: 'fa fa-arrow-right',
+        title: '追踪用户'
     }]
 }, {
     url: 'javascript:;',

@@ -35,7 +35,7 @@ import {
   Log,
   ErrorPage
 } from './views';
-
+import Test4 from './views/ysj/user/test4';
 export default (
   <Route path="/" component={Base}>
 
@@ -67,6 +67,7 @@ export default (
     <Route path="ysj/tool1" component={SearchDemo} />
     <Route path="ysj/tool2" component={JModal} />
     <Route path="ysj/tool3" component={Maptest} />
+    <Route path="ysj/tool4" component={Test4} />
 
     <Route path="form/yform" component={Yform} />
 
