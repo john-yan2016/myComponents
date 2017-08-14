@@ -56,12 +56,14 @@ export default class Yframe extends Component {
     time = item.timeOut = Date.now();
     item.time = item.timeOut - item.timeIn;
     Arr.push(item);
-    console.log(Arr);
+    localStorage.setItem('urlTrack',JSON.stringify(Arr));
+    // console.log(Arr);
   }
 
   componentWillUnmount = () => {
     window.removeEventListener('hashchange', this.hashChg, false);
     clearInterval(this.timer);
+    localStorage.removeItem("urlTrack");
   };
 
   render() {
