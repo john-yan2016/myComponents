@@ -2,7 +2,7 @@ import React, {
   Component,
 } from 'react';
 import {Icon} from 'antd';
-import './test5.less';  
+import './test5.less';
 
 export default class Highcharts extends Component {
   constructor(props) {
@@ -38,17 +38,12 @@ export default class Highcharts extends Component {
       document.getElementsByClassName('Jcenter')[0].style.zIndex='2';
       document.getElementsByClassName('Jright')[0].style.zIndex='1';
   }
-
            
   render() {
     let that = this;
     let { index } = that.state;
     return (
       <div className="test5">
-        <div className="social-share" data-wechat-qrcode-title="请打开微信扫一扫" 
-        data-weibo-title="分享到微博" data-qq-title="分享到QQ"
-        data-sites="qq, weibo,wechat">
-        </div>
         <div className="card1">
         <div className={'contentBody '+index[0]}>
           <h1 className="title"><Icon type="left" onClick={that.slideLeft} />热门数据

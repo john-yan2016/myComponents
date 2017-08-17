@@ -1,13 +1,33 @@
 import React, {Component} from 'react';
 import {Row,Col} from 'yrui';
-import {Modal,Form,Input,Select,Checkbox,Button} from 'antd';
+import {Modal,Form,Input,Select,Checkbox,Button,Upload,Icon} from 'antd';
 
 const FormItem = Form.Item;
 const Option = Select.Option;
 
-const CollectionCreateForm = Form.create()(
-  (props) => {
-    const {form} = props;
+class Formtest extends React.Component {
+
+  handleSelectChange = (value)=> {
+    console.log(value);
+    this.props.form.setFieldsValue({
+      note: `Hi, ${value === 'male' ? 'man' : 'lady'}!`,
+    });
+  }
+  handleChange=(value)=> {
+    console.log(`selected ${value}`);
+  }
+  normFile = (e)=> {
+    console.log('Upload event:', e);
+    if (Array.isArray(e)) {
+      return e;
+    }
+    //控制上传列表为最新一个
+    e.fileList = e.fileList.slice(-1);
+    this.props.form.setFieldsValue({upload:e.fileList});
+    return e && e.fileList;
+  }
+  render() {
+    const {form} = this.props;
     const {getFieldDecorator} = form;
     const formItemLayout = {
       labelCol: {
@@ -27,15 +47,6 @@ const CollectionCreateForm = Form.create()(
     for (let i = 10; i < 36; i++) {
       children.push(<Option key={i.toString(36) + i}>{i.toString(36) + i}</Option>);
     }
-    function handleSelectChange(value) {
-      console.log(value);
-      this.props.form.setFieldsValue({
-        note: `Hi, ${value === 'male' ? 'man' : 'lady'}!`,
-      });
-    }
-    function handleChange(value) {
-      console.log(`selected ${value}`);
-    }
     return (
         <Form layout="vertical">
           <FormItem
@@ -44,7 +55,7 @@ const CollectionCreateForm = Form.create()(
             {getFieldDecorator('user', {
               rules: [{ required: true, message: 'Please select user!' }]
             })(
-              <Select onChange={handleSelectChange}>
+              <Select onChange={this.handleSelectChange}>
                 <Option value="1">1</Option>
                 <Option value="2">2</Option>
               </Select>
@@ -80,7 +91,7 @@ const CollectionCreateForm = Form.create()(
             {getFieldDecorator('gitignore')(
               <Select placeholder="请选择ignore模板"
                 mode="tags"
-                onChange={handleChange}
+                onChange={this.handleChange}
               >
                 {children}
               </Select>
@@ -92,7 +103,7 @@ const CollectionCreateForm = Form.create()(
             {getFieldDecorator('access')(
               <Select placeholder="请选择授权许可文件"
                 mode="tags"
-                onChange={handleChange}
+                onChange={this.handleChange}
               >
                 {children}
               </Select>
@@ -104,7 +115,7 @@ const CollectionCreateForm = Form.create()(
             {getFieldDecorator('doc')(
               <Select placeholder="Default"
                 mode="tags"
-                onChange={handleChange}
+                onChange={this.handleChange}
               >
                 {children}
               </Select>
@@ -119,18 +130,44 @@ const CollectionCreateForm = Form.create()(
             <Checkbox>使用选定的文件和模板初始化</Checkbox>
           )}
         </FormItem>
+        <FormItem
+        {...formItemLayout}
+        label="Upload"
+        extra="longgggggggggggggggggggggggggggggggggg"
+      >
+        {getFieldDecorator('upload', {
+          valuePropName: 'fileList',
+          getValueFromEvent: this.normFile
+        })(
+          <Upload name="logo" listType="picture">
+            <Button>
+              <Icon type="upload" /> Click to upload
+            </Button>
+          </Upload>
+        )}
+      </FormItem>
         </Form>
     );
   }
-);
+  }
+
+const CollectionCreateForm = Form.create()(Formtest);
 
 export default class Test extends Component {
   constructor(props) {
     super(props);
-    this.state = {visible: false};
+    this.state = {
+      visible: false,
+      fileList: [],
+    };
   }
   handleCancel = () => {
-    this.setState({visible: false});
+    const form = this.form;
+    form.resetFields();
+    this.setState({
+      visible: false
+    });
+
   }
   handleCreate = () => {
     const form = this.form;
