@@ -99,12 +99,6 @@ syntaxHighlight = (json) => {
     const DevInf = this.getDevice();
 
     return (
-<<<<<<< HEAD
-      <div>
-        {/* <iframe src="http://localhost:9200/#/" frameborder="0" width="100%" height="800" marginheight="0" marginwidth="0">
-        </iframe> */}
-      		</div>
-=======
       <div className="test4">
           <p>浏览器名称和版本:</p>
           <div dangerouslySetInnerHTML={{__html: this.syntaxHighlight(BrowerInf)}} />
@@ -121,7 +115,6 @@ syntaxHighlight = (json) => {
           <p>当前访问路径记录: </p>
           <div dangerouslySetInnerHTML={{__html: this.syntaxHighlight(localStorage.urlTrack)}} />
           </div>
->>>>>>> fb1aa916d271e8f15d851e6733e8dd29e509dd49
 
     )
   };
