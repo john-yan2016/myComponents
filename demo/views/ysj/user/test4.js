@@ -108,7 +108,8 @@ export default class Highcharts extends Component {
   render() {
     return (
       <div>
-        123
+        {/* <iframe src="http://localhost:9200/#/" frameborder="0" width="100%" height="800" marginheight="0" marginwidth="0">
+        </iframe> */}
       		</div>
 
     )
