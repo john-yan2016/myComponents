@@ -1,0 +1,118 @@
+.card1 {
+  margin-top: 70px;
+  position: relative;
+  height: 315px;
+  .contentBody {
+      width: 33.3333%;
+      background-color: #fbfbff;
+      border: 1px solid #bdbdbd;
+      // &:hover {
+      //     cursor: pointer;
+      //     border: 1px solid #4e90ff;
+      //     box-shadow: 0px 0px 8px #4e90ff;
+      // }
+      .title {
+          font-size: 20px;
+          color: #333333;
+          text-align: center;
+          background-color: #eceef4;
+          padding: 15px 0px;
+          i {
+              visibility: hidden;
+              color: white;
+              &:hover {
+                  cursor: pointer;
+                  color: #4e90ff;
+              }
+          }
+          .anticon-left {
+              float: left;
+              margin-left: 30px;
+          }
+          .anticon-right {
+              float: right;
+              margin-right: 30px;
+          }
+      }
+      .body {
+          padding: 30px 29px 16px 29px;    
+          p {
+              margin-bottom: 15px;    
+          }            
+          .dot {
+              display: inline-block;
+              background-color: #4e90ff;
+              width: 4px;
+              height: 4px;
+              margin-right: 20px;
+          }
+          .news a {      
+              font-size: 16px;
+              color: #333333;
+              &:hover {
+                  color: #4e90ff;
+              }
+          }      
+          .label {
+              font-size: 14px;
+              padding: 1px 12px;
+              float: right;
+              color: white;
+              background-color: #c5c5c5;
+              border-radius: 5px;
+          } 
+      }
+      .more {
+          text-align: center;
+          margin-top: 20px;
+          a {
+              display: inline-block;
+              padding: 4px 15px;
+              border: 1px solid #bdbdbd;
+              border-radius: 5px;
+              &:hover {
+                 color: #4e90ff; 
+              }
+          }
+      }
+  }
+  .Jleft {
+      transition: all 0.5s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+  }
+  .Jcenter {
+      transition: all 0.5s ease;
+      z-index: 3;
+      position: absolute;
+      top: 0;
+      left: 33.333%;
+      transform:scale(1.08);
+      transform-origin: bottom;
+      background-color: #ffffff;
+      border: 1px solid #4e90ff;
+      box-shadow: 0px 0px 8px #4e90ff;
+      .title {
+          color: #4e90ff;
+          i {
+              visibility: visible;
+          }
+      }
+      .body .label {
+          background-color: #a6c7ff;
+      }
+      .more a {
+          border-color: #4e90ff;
+          color: #4e90ff;
+      }
+  }
+   .Jright {
+      transition: all 0.5s ease;
+      position: absolute;
+      top: 0;
+      left: 66.666%;
+      z-index: 2;
+  }
+  }

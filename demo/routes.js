@@ -36,6 +36,10 @@ import {
   ErrorPage
 } from './views';
 import Test4 from './views/ysj/user/test4';
+import Slidetest from './views/ysj/slide/test5';
+import Sharetest from './views/ysj/share/test6';
+import Detail from './views/ysj/share/detail';
+
 export default (
   <Route path="/" component={Base}>
 
@@ -68,6 +72,9 @@ export default (
     <Route path="ysj/tool2" component={JModal} />
     <Route path="ysj/tool3" component={Maptest} />
     <Route path="ysj/tool4" component={Test4} />
+    <Route path="ysj/tool5" component={Slidetest} />
+    <Route path="ysj/tool6" component={Sharetest} />
+    <Route path="ysj/tool6/detail" component={Detail} />
 
     <Route path="form/yform" component={Yform} />
 

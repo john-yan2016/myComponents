@@ -127,6 +127,14 @@ export const sidebarMenu = [{
         url: '/ysj/tool4',
         icon: 'fa fa-arrow-right',
         title: '追踪用户'
+    }, {
+        url: '/ysj/tool5',
+        icon: 'fa fa-arrow-right',
+        title: '走马灯'
+    }, {
+        url: '/ysj/tool6',
+        icon: 'fa fa-arrow-right',
+        title: '分享'
     }]
 }, {
     url: 'javascript:;',

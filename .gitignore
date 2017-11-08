@@ -48,3 +48,4 @@ y_dist
 webpack.production.js
 
 *.zip
+.vscode

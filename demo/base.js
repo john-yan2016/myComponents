@@ -56,12 +56,14 @@ export default class Yframe extends Component {
     time = item.timeOut = Date.now();
     item.time = item.timeOut - item.timeIn;
     Arr.push(item);
-    console.log(Arr);
+    localStorage.setItem('urlTrack',JSON.stringify(Arr));
+    // console.log(Arr);
   }
 
   componentWillUnmount = () => {
     window.removeEventListener('hashchange', this.hashChg, false);
     clearInterval(this.timer);
+    localStorage.removeItem("urlTrack");
   };
 
   render() {
@@ -91,6 +93,12 @@ export default class Yframe extends Component {
               <YpageHeader breadcrumb={breadcrumb} hidePagetitle={false} />
 
               <div className="y-pagecontent">
+              {/* <div className="social-share" data-initialized="true" data-wechat-qrcode-title="请打开微信扫一扫" 
+              data-weibo-title="分享到微博" data-qq-title="分享到QQ">
+                <a href="javascript:;" className="social-share-icon icon-wechat"></a>
+                <a href="javascript:;" className="social-share-icon icon-weibo"></a>
+                <a href="javascript:;" className="social-share-icon icon-qq"></a>
+              </div> */}
                 <div>{children}</div>
               </div>
 
